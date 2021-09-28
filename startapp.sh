@@ -8,7 +8,10 @@ dbus-launch gsettings set org.virt-manager.virt-manager.connections uris "$HOSTS
 dbus-launch gsettings set org.virt-manager.virt-manager.connections autoconnect "$HOSTS"
 dbus-launch gsettings set org.virt-manager.virt-manager xmleditor-enabled true
 
+while true
+do
 tilix &
 TILIX=$!
 virt-manager --no-fork
 wait $TILIX
+done
