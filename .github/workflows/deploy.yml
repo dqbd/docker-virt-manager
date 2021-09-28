@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - 'main'
+      - 'delold'
 
 jobs:
   docker:
@@ -31,4 +32,4 @@ jobs:
           context: .
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: mber5/virt-manager:latest
+          tags: delold/virt-manager:latest
